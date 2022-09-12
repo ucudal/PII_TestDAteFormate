@@ -14,11 +14,11 @@ public class DateFormatTests
     public void ChangeDateOkay()
     {
         //Configuración
-        const string initialDate= "10/11/1997";
-        const string expectedDate= "1997-11-10";
+        const string initialDate = "10/11/1997";
+        const string expectedDate = "1997-11-10";
 
         //Ejecución
-        string testDate= DateFormatter.ChangeFormat(initialDate);
+        string testDate = DateFormatter.ChangeFormat(initialDate);
 
         //Comprobación
         Assert.AreEqual(expectedDate, testDate);
@@ -28,11 +28,11 @@ public class DateFormatTests
     public void ChangeDateWrong()
     {
         //Configuración
-        const string initialWrongDate= "1/11/1997";
-        const string expectedWrongDate= null;
+        const string initialWrongDate = "1/11/1997";
+        const string expectedWrongDate = null;
 
         //Ejecución
-        DateFormatter testDate= new DateFormatter(initialWrongDate);
+        DateFormatter testDate = new DateFormatter(initialWrongDate);
 
         //Comprobación
         Assert.AreEqual(expectedWrongDate, testDate.TestDate);
@@ -42,11 +42,11 @@ public class DateFormatTests
     public void EmptyDate()
     {
         //Configuración
-        const string initialEmptyDate= " ";
-        const string expectedEmptyDate= null;
+        const string initialEmptyDate = " ";
+        const string expectedEmptyDate = null;
 
         //Ejecución
-        DateFormatter testEmptyDate= new DateFormatter(initialEmptyDate);
+        DateFormatter testEmptyDate = new DateFormatter(initialEmptyDate);
 
         //Comprobación
         Assert.AreEqual(expectedEmptyDate, testEmptyDate.TestDate);
